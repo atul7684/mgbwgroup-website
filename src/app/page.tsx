@@ -247,18 +247,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-16 px-4 bg-pink-600 text-white text-center">
-        <h2 className="text-2xl md:text-3xl font-bold mb-4">
-          Have questions or need more information? We&apos;re here to help!
-        </h2>
-        <Link
-          href="/contact"
-          className="inline-block mt-4 px-8 py-3 bg-white text-pink-600 rounded-full font-semibold hover:bg-gray-100 transition"
-        >
-          CONTACT US
-        </Link>
-      </section>
     </>
   );
 }

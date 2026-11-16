@@ -108,7 +108,7 @@ export default function ContactPage() {
             {/* Map Embed */}
             <div className="rounded-xl overflow-hidden shadow-md">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3898.0!2d76.65!3d12.31!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDE4JzM2LjAiTiA3NsKwMzknMDAuMCJF!5e0!3m2!1sen!2sin!4v1"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3898.1!2d76.6551!3d12.3052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zVmlub2JhIFJvYWQsIE15c29yZQ!5e0!3m2!1sen!2sin!4v1"
                 width="100%"
                 height="300"
                 style={{ border: 0 }}
