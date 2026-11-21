@@ -201,10 +201,16 @@ section.w-full.relative .flex.items-center.justify-center.sticky > div.relative 
   min-height: 200px;
   object-fit: cover;
 }
-/* Text content alignment for consistency */
+/* Text content alignment for consistency - desktop only */
 section.w-full.relative .flex.items-center.justify-center.sticky > div.relative > div.w-full:last-child .flex-col {
   flex-direction: row !important;
   align-items: center !important;
+}
+@media (max-width:639px){
+  section.w-full.relative .flex.items-center.justify-center.sticky > div.relative > div.w-full:last-child .flex-col {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
 }
 section.w-full.relative .flex.items-center.justify-center.sticky > div.relative > div.w-full:last-child h3 {
   text-align: left !important;
@@ -218,19 +224,23 @@ section.w-full.relative .flex.items-center.justify-center.sticky > div.relative 
 }
 
 @media (max-width:639px){
+  /* Vertical stack: image on top, content below */
   section.w-full.relative .flex.items-center.justify-center.sticky > div.relative {
-    min-height: 220px;
+    min-height: auto !important;
+    flex-direction: column !important;
     padding: 0.75rem !important;
     gap: 0.75rem !important;
   }
   section.w-full.relative .flex.items-center.justify-center.sticky > div.relative > div.w-full:first-child {
-    width: 38% !important;
+    width: 100% !important;
   }
   section.w-full.relative .flex.items-center.justify-center.sticky > div.relative > div.w-full:last-child {
-    width: 62% !important;
+    width: 100% !important;
   }
   section.w-full.relative .flex.items-center.justify-center.sticky > div.relative > div.w-full:first-child img {
-    min-height: 180px;
+    height: 180px !important;
+    min-height: auto !important;
+    width: 100% !important;
     border-radius: 0.75rem !important;
   }
   /* Logo + heading row */
@@ -243,14 +253,16 @@ section.w-full.relative .flex.items-center.justify-center.sticky > div.relative 
     height: 2.5rem !important;
   }
   section.w-full.relative .flex.items-center.justify-center.sticky > div.relative > div.w-full:last-child h3 {
-    font-size: 1.1rem !important;
-    text-align: left !important;
+    font-size: 1rem !important;
+    text-align: center !important;
   }
   section.w-full.relative .flex.items-center.justify-center.sticky > div.relative > div.w-full:last-child p {
     font-size: 0.85rem !important;
     line-height: 1.5 !important;
-    -webkit-line-clamp: 3;
-    text-align: left !important;
+    -webkit-line-clamp: unset !important;
+    overflow: visible !important;
+    display: block !important;
+    text-align: center !important;
   }
   /* Smaller button on mobile */
   section.w-full.relative .tile-btn {
@@ -258,9 +270,23 @@ section.w-full.relative .flex.items-center.justify-center.sticky > div.relative 
     padding: 0.35rem 1rem !important;
     height: auto !important;
   }
-  /* Reduce spacing between tiles */
+  /* Reduce spacing between tiles — smaller strip */
   section.w-full.relative .flex.items-center.justify-center.sticky {
-    margin-bottom: 1.5rem !important;
+    margin-bottom: 1rem !important;
+  }
+  /* Reduce sticky scroll section margins on mobile */
+  section.w-full.relative .flex.items-center.justify-center.sticky {
+    margin-bottom: 0.5rem !important;
+  }
+  section.w-full.relative .flex.items-center.justify-center.sticky + .flex.items-center.justify-center.sticky {
+    margin-top: -2rem !important;
+  }
+  /* Gap between tiles section and Journey Through Time */
+  main.bg-\[\\#1e1b4b\] + .bg-brandPink {
+    margin-top: 2rem !important;
+  }
+  main.bg-\[\\#1e1b4b\] > section.w-full.relative {
+    padding-bottom: 1rem !important;
   }
 }
 </style>
