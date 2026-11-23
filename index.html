@@ -293,18 +293,18 @@ section.w-full.relative .flex.items-center.justify-center.sticky > div.relative 
 <style id="mobile-fixes">
 @media (max-width:639px) {
   /* ===== TILES: disable sticky, clean card layout on mobile ===== */
-  .sticky {
+  div.flex.items-center.justify-center.sticky {
     position: relative !important;
     top: auto !important;
-    margin-bottom: 3rem !important;
+    margin-bottom: 2.5rem !important;
     margin-top: 0 !important;
   }
   /* Override inline top:calc() on inner cards */
-  .sticky > div[style*="top:calc"] {
+  div.sticky > div.relative {
     top: auto !important;
   }
   /* Full images with rounded corners, no cropping */
-  .sticky img.object-cover {
+  div.sticky img.object-cover {
     height: auto !important;
     max-height: 280px !important;
     object-fit: contain !important;
