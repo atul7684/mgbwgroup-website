@@ -125,6 +125,11 @@ p.csr-sub{text-align:center!important;max-width:900px;margin-left:auto!important
 .ini-detail .ini-crumb a{color:#fff;text-decoration:underline}
 @media(max-width:640px){.ini-detail .ini-hero{height:220px}.ini-detail .ini-h1{font-size:1.9rem}.ini-detail .ini-box{padding:22px 18px 26px}.ini-detail .ini-title{font-size:1.25rem}.ini-detail .ini-ic{width:48px;height:48px;padding:12px}.ini-detail .ini-list li{font-size:.97rem;gap:12px}}
 </style><style id="mobile-fixes">
+/* Justify paragraph text on all screen sizes */
+p { text-align: justify; text-justify: inter-word; }
+h1, h2, h3, h4, h5, h6 { text-align: unset; }
+.text-center { text-align: center; }
+footer p, .border-t p, nav p, p.csr-sub, p.ini-crumb, p.ini-tag { text-align: unset; }
 @media (max-width:639px) {
   p { text-align: justify !important; hyphens: auto; -webkit-hyphens: auto; word-break: break-word; }
   h1, h2, h3, h4, h5, h6 { text-align: unset !important; }

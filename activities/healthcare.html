@@ -147,6 +147,11 @@ p.csr-sub{text-align:center!important;max-width:900px;margin-left:auto!important
 @media(max-width:640px){.ini-detail .kh-text{font-size:.97rem}.ini-detail .kh-btn{width:36px;height:36px}.ini-detail .kh-btn svg{width:18px;height:18px}.ini-detail .kh-prev{left:8px}.ini-detail .kh-next{right:8px}}
 @media(prefers-reduced-motion:reduce){.ini-detail .kh-track{scroll-behavior:auto}}
 </style><style id="mobile-fixes">
+/* Justify paragraph text on all screen sizes */
+p { text-align: justify; text-justify: inter-word; }
+h1, h2, h3, h4, h5, h6 { text-align: unset; }
+.text-center { text-align: center; }
+footer p, .border-t p, nav p, p.csr-sub, p.ini-crumb, p.ini-tag { text-align: unset; }
 @media (max-width:639px) {
   p { text-align: justify !important; hyphens: auto; -webkit-hyphens: auto; word-break: break-word; }
   h1, h2, h3, h4, h5, h6 { text-align: unset !important; }
