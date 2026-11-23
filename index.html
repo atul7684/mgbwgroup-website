@@ -297,12 +297,13 @@ section.w-full.relative .flex.items-center.justify-center.sticky > div.relative 
     margin-bottom: 10rem !important;
     margin-top: -20px !important;
   }
-  /* Show full images - no cropping */
+  /* Show full images - no cropping, with nice rounded corners */
   .sticky img.object-cover {
     height: auto !important;
     max-height: 280px !important;
     object-fit: contain !important;
     width: 100% !important;
+    border-radius: 1rem !important;
   }
   /* Ensure Explore More buttons visible */
   a.tile-btn {
@@ -310,14 +311,18 @@ section.w-full.relative .flex.items-center.justify-center.sticky > div.relative 
     margin-top: 0.5rem !important;
     margin-bottom: 0.5rem !important;
   }
-  /* Remove white gap: extend dark bg to meet Journey section */
+  /* Tiles section: extra padding at bottom so last tile clears Journey */
+  section.w-full.relative {
+    padding-bottom: 6rem !important;
+  }
+  /* No white gap between dark tiles bg and pink Journey bg */
+  main.text-white {
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+  }
   main[class*="bg-"] + div.bg-brandPink {
     margin-top: 0 !important;
     padding-top: 2rem !important;
-  }
-  main.text-white {
-    padding-bottom: 3rem !important;
-    margin-bottom: 0 !important;
   }
 
   /* ===== TEXT FIX: justify paragraphs with hyphenation ===== */
