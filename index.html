@@ -292,33 +292,44 @@ section.w-full.relative .flex.items-center.justify-center.sticky > div.relative 
 </style>
 <style id="mobile-fixes">
 @media (max-width:639px) {
-  /* Fix tile image heights - taller on mobile so content isn't cropped */
+  /* ===== TILE FIX: disable sticky stacking, let tiles flow normally ===== */
+  .sticky {
+    position: relative !important;
+    top: auto !important;
+    margin-bottom: 1.5rem !important;
+    margin-top: 0 !important;
+  }
+  /* Override inline top:calc(12vh+...) on inner card */
+  .sticky > .rounded-2xl,
+  .sticky > .rounded-3xl {
+    top: auto !important;
+  }
+  /* Taller tile images so content is fully visible */
   .sticky .rounded-2xl img.object-cover,
   .sticky .rounded-3xl img.object-cover {
-    height: 200px !important;
+    height: 220px !important;
+    min-height: 220px !important;
     object-fit: cover;
   }
-  /* Fix tile layout - stack vertically on mobile for full visibility */
-  .sticky .rounded-2xl.flex-col.lg\:flex-row,
-  .sticky .rounded-3xl.flex-col.lg\:flex-row {
-    gap: 0.75rem !important;
+  /* Ensure Explore More buttons are fully visible */
+  a.tile-btn {
+    display: inline-block !important;
+    margin-top: 0.5rem !important;
+    margin-bottom: 0.5rem !important;
   }
-  /* Reduce tile bottom margin on mobile for less overlap/gap issues */
-  .sticky {
-    margin-bottom: 6rem !important;
-  }
-  /* Add spacing before Journey section */
-  main.bg-\[\#1e1b4b\] + div.bg-brandPink {
+  /* Spacing before Journey Through Time section */
+  div.bg-brandPink {
+    margin-top: 1rem !important;
     padding-top: 2rem !important;
   }
-  /* Justify paragraph text on mobile with hyphens to prevent huge word gaps */
+
+  /* ===== TEXT FIX: justify paragraphs with hyphenation ===== */
   p {
     text-align: justify !important;
     hyphens: auto;
     -webkit-hyphens: auto;
     word-break: break-word;
   }
-  /* Preserve heading alignment, centered elements, footer, nav */
   h1, h2, h3, h4, h5, h6 { text-align: unset !important; }
   .text-center { text-align: center !important; }
   footer p, .border-t p, nav p { text-align: unset !important; }
