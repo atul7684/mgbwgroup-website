@@ -292,26 +292,20 @@ section.w-full.relative .flex.items-center.justify-center.sticky > div.relative 
 </style>
 <style id="mobile-fixes">
 @media (max-width:639px) {
-  /* ===== TILE FIX: disable sticky stacking, let tiles flow normally ===== */
+  /* ===== TILE FIX: keep sticky stacking, proper gaps, full images ===== */
+  /* Proper gap between tiles on mobile */
   .sticky {
-    position: relative !important;
-    top: auto !important;
-    margin-bottom: 1.5rem !important;
-    margin-top: 0 !important;
+    margin-bottom: 10rem !important;
+    margin-top: -20px !important;
   }
-  /* Override inline top:calc(12vh+...) on inner card */
-  .sticky > .rounded-2xl,
-  .sticky > .rounded-3xl {
-    top: auto !important;
+  /* Show full images - no cropping */
+  .sticky img.object-cover {
+    height: auto !important;
+    max-height: 280px !important;
+    object-fit: contain !important;
+    width: 100% !important;
   }
-  /* Taller tile images so content is fully visible */
-  .sticky .rounded-2xl img.object-cover,
-  .sticky .rounded-3xl img.object-cover {
-    height: 220px !important;
-    min-height: 220px !important;
-    object-fit: cover;
-  }
-  /* Ensure Explore More buttons are fully visible */
+  /* Ensure Explore More buttons visible */
   a.tile-btn {
     display: inline-block !important;
     margin-top: 0.5rem !important;
@@ -319,7 +313,7 @@ section.w-full.relative .flex.items-center.justify-center.sticky > div.relative 
   }
   /* Spacing before Journey Through Time section */
   div.bg-brandPink {
-    margin-top: 1rem !important;
+    margin-top: 2rem !important;
     padding-top: 2rem !important;
   }
 
