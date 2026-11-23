@@ -53,8 +53,10 @@
 }
 @media (max-width:639px) {
   /* Justify paragraph text on mobile */
-  p { text-align: justify !important; }
-  h1, h2, h3, h4, h5, h6, .text-center, footer p, .border-t p, nav p { text-align: inherit !important; }
+  p { text-align: justify !important; hyphens: auto; -webkit-hyphens: auto; word-break: break-word; }
+  h1, h2, h3, h4, h5, h6 { text-align: unset !important; }
+  .text-center { text-align: center !important; }
+  footer p, .border-t p, nav p { text-align: unset !important; }
 }
 </style>
 <style id="footer-compact">
