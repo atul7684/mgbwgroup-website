@@ -292,10 +292,9 @@ section.w-full.relative .flex.items-center.justify-center.sticky > div.relative 
 </style>
 <style id="mobile-fixes">
 @media (max-width:639px) {
-  /* ===== TILES: keep sticky parallax on mobile ===== */
-  /* Each tile needs enough margin-bottom for scroll distance */
+  /* ===== TILES: sticky parallax on mobile ===== */
   div.flex.items-center.justify-center.sticky {
-    margin-bottom: 24rem !important;
+    margin-bottom: 12rem !important;
     margin-top: 0 !important;
   }
   /* Full images - no cropping, rounded corners */
@@ -306,7 +305,7 @@ section.w-full.relative .flex.items-center.justify-center.sticky > div.relative 
     width: 100% !important;
     border-radius: 1rem !important;
   }
-  /* Override inline top:calc() on inner cards */
+  /* Inner card position */
   div.sticky > div.relative {
     top: 10px !important;
   }
@@ -320,9 +319,9 @@ section.w-full.relative .flex.items-center.justify-center.sticky > div.relative 
     display: inline-block !important;
     margin-top: 0.5rem !important;
   }
-  /* Spacer after last tile for scroll room */
+  /* Small spacer after last tile - just enough to see it fully */
   .tile-spacer {
-    height: 70vh !important;
+    height: 25vh !important;
   }
   /* No white gap before Journey */
   main.text-white {
