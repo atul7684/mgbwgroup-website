@@ -294,8 +294,12 @@ section.w-full.relative .flex.items-center.justify-center.sticky > div.relative 
 @media (max-width:639px) {
   /* ===== TILES: sticky parallax on mobile ===== */
   div.flex.items-center.justify-center.sticky {
-    margin-bottom: 12rem !important;
+    margin-bottom: 14rem !important;
     margin-top: 0 !important;
+  }
+  /* Last tile needs less bottom margin - spacer handles the rest */
+  div.flex.items-center.justify-center.sticky:last-of-type {
+    margin-bottom: 2rem !important;
   }
   /* Full images - no cropping, rounded corners */
   div.sticky img.object-cover {
@@ -321,7 +325,7 @@ section.w-full.relative .flex.items-center.justify-center.sticky > div.relative 
   }
   /* Small spacer after last tile - just enough to see it fully */
   .tile-spacer {
-    height: 25vh !important;
+    height: 10vh !important;
   }
   /* No white gap before Journey */
   main.text-white {
