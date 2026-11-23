@@ -293,7 +293,6 @@ section.w-full.relative .flex.items-center.justify-center.sticky > div.relative 
 <style id="mobile-fixes">
 @media (max-width:639px) {
   /* ===== TILE FIX: keep sticky stacking, proper gaps, full images ===== */
-  /* Proper gap between tiles on mobile */
   .sticky {
     margin-bottom: 10rem !important;
     margin-top: -20px !important;
@@ -311,10 +310,14 @@ section.w-full.relative .flex.items-center.justify-center.sticky > div.relative 
     margin-top: 0.5rem !important;
     margin-bottom: 0.5rem !important;
   }
-  /* Spacing before Journey Through Time section */
-  div.bg-brandPink {
-    margin-top: 2rem !important;
+  /* Remove white gap: extend dark bg to meet Journey section */
+  main[class*="bg-"] + div.bg-brandPink {
+    margin-top: 0 !important;
     padding-top: 2rem !important;
+  }
+  main.text-white {
+    padding-bottom: 3rem !important;
+    margin-bottom: 0 !important;
   }
 
   /* ===== TEXT FIX: justify paragraphs with hyphenation ===== */
